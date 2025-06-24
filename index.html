@@ -11,8 +11,12 @@
 
 <header class="header container">
   <a href="#" class="logo">Thai&Bali<span>Massage</span></a>
-  <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
-  <nav class="nav" id="nav-menu">
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+  <nav class="nav" id="nav-menu" aria-label="Główna nawigacja">
     <ul class="nav-list">
       <li><a href="#home" class="nav-link active">Home</a></li>
       <li><a href="#about" class="nav-link">O nas</a></li>
@@ -21,9 +25,10 @@
       <li><a href="#contact" class="nav-link">Kontakt</a></li>
     </ul>
   </nav>
+  <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Przełącz tryb ciemny">🌙</button>
 </header>
 
-<section id="home" class="hero container">
+<section id="home" class="hero container" tabindex="-1">
   <div class="hero-content">
     <h1>Tradycyjne masaże tajskie i balijskie</h1>
     <p>Głęboki relaks, harmonia ciała i ducha</p>
@@ -31,7 +36,7 @@
   </div>
 </section>
 
-<section id="about" class="section container">
+<section id="about" class="section container fade-in-section">
   <h2>O nas</h2>
   <div class="about-content">
     <div class="about-text">
@@ -42,7 +47,7 @@
   </div>
 </section>
 
-<section id="services" class="section container">
+<section id="services" class="section container fade-in-section">
   <h2>Nasza oferta</h2>
   <ul class="services-list">
     <li>Masaż tajski klasyczny</li>
@@ -53,7 +58,7 @@
   </ul>
 </section>
 
-<section id="gallery" class="section container">
+<section id="gallery" class="section container fade-in-section">
   <h2>Galeria</h2>
   <div class="gallery-grid">
     <div class="gallery-item placeholder">Zdjęcie 1</div>
@@ -63,9 +68,9 @@
   </div>
 </section>
 
-<section id="contact" class="section container">
+<section id="contact" class="section container fade-in-section">
   <h2>Kontakt</h2>
-  <form id="contact-form" class="contact-form">
+  <form id="contact-form" class="contact-form" novalidate>
     <input type="text" id="name" name="name" placeholder="Imię i nazwisko" required />
     <input type="email" id="email" name="email" placeholder="Adres e-mail" required />
     <textarea id="message" name="message" placeholder="Wiadomość" rows="5" required></textarea>
