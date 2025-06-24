@@ -3,41 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oriental Relax – Masaże Tajskie i Balijskie</title>
+  <title>Thai & Bali Massage</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <h1>Oriental Relax</h1>
-    <button id="hamburger" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <nav id="nav-menu">
-      <ul>
-        <li><a href="#o-nas">O nas</a></li>
-        <li><a href="#oferta">Oferta</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
-  </div>
+<header class="header container">
+  <a href="#" class="logo">Thai&Bali<span>Massage</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+  <nav class="nav" id="nav-menu">
+    <ul class="nav-list">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">O nas</a></li>
+      <li><a href="#services" class="nav-link">Oferta</a></li>
+      <li><a href="#gallery" class="nav-link">Galeria</a></li>
+      <li><a href="#contact" class="nav-link">Kontakt</a></li>
+    </ul>
+  </nav>
 </header>
 
-<section id="hero">
-  <div class="hero-text">
-    <h2>Tradycyjne masaże tajskie i balijskie</h2>
-    <p>Odkryj głęboki relaks i harmonię ciała z Oriental Relax</p>
+<section id="home" class="hero container">
+  <div class="hero-content">
+    <h1>Tradycyjne masaże tajskie i balijskie</h1>
+    <p>Głęboki relaks, harmonia ciała i ducha</p>
+    <a href="#contact" class="btn-primary">Umów się na masaż</a>
   </div>
 </section>
 
-<section id="o-nas" class="container">
+<section id="about" class="section container">
   <h2>O nas</h2>
-  <p>Jesteśmy miejscem, gdzie tradycja i nowoczesność spotykają się, aby dostarczyć Ci niezapomnianych doświadczeń masażu. Nasze masażystki są wykwalifikowane i pełne pasji, dbając o Twój komfort i dobre samopoczucie.</p>
+  <div class="about-content">
+    <div class="about-text">
+      <p>Jesteśmy profesjonalnym salonem masażu, oferującym tradycyjne masaże z Azji Południowo-Wschodniej. Nasze usługi zapewnią Ci relaks, odprężenie i ukojenie.</p>
+      <p>Doświadczenie, pasja i wyjątkowa atmosfera sprawią, że poczujesz się wyjątkowo.</p>
+    </div>
+    <div class="about-image placeholder">Zdjęcie - O nas</div>
+  </div>
 </section>
 
-<section id="oferta" class="container">
-  <h2>Oferta</h2>
-  <ul>
+<section id="services" class="section container">
+  <h2>Nasza oferta</h2>
+  <ul class="services-list">
     <li>Masaż tajski klasyczny</li>
     <li>Masaż balijski aromaterapeutyczny</li>
     <li>Masaż gorącymi kamieniami</li>
@@ -46,28 +53,28 @@
   </ul>
 </section>
 
-<section id="galeria" class="container">
+<section id="gallery" class="section container">
   <h2>Galeria</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1549187774-b4e9d26e10d4?auto=format&fit=crop&w=400&q=80" alt="Masaż tajski" />
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Masaż balijski" />
-    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80" alt="Olejek do masażu" />
-    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80" alt="Salon masażu" />
+  <div class="gallery-grid">
+    <div class="gallery-item placeholder">Zdjęcie 1</div>
+    <div class="gallery-item placeholder">Zdjęcie 2</div>
+    <div class="gallery-item placeholder">Zdjęcie 3</div>
+    <div class="gallery-item placeholder">Zdjęcie 4</div>
   </div>
 </section>
 
-<section id="kontakt" class="container">
+<section id="contact" class="section container">
   <h2>Kontakt</h2>
-  <form id="contact-form">
+  <form id="contact-form" class="contact-form">
     <input type="text" id="name" name="name" placeholder="Imię i nazwisko" required />
-    <input type="email" id="email" name="email" placeholder="Email" required />
-    <textarea id="message" name="message" rows="5" placeholder="Wiadomość" required></textarea>
-    <button type="submit">Wyślij</button>
+    <input type="email" id="email" name="email" placeholder="Adres e-mail" required />
+    <textarea id="message" name="message" placeholder="Wiadomość" rows="5" required></textarea>
+    <button type="submit" class="btn-primary">Wyślij</button>
   </form>
 </section>
 
-<footer>
-  &copy; 2025 Oriental Relax – Masaże Tajskie i Balijskie
+<footer class="footer container">
+  &copy; 2025 Thai & Bali Massage
 </footer>
 
 <script src="script.js"></script>
