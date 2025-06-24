@@ -2,176 +2,222 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  margin:0; padding:0;
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #faf7f0;
-  color: #3a3a3a;
-  line-height: 1.5;
-}
-a {
-  color: #2a5a36;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+  background-color: #f9f5f0;
+  color: #2f2f2f;
+  line-height: 1.6;
 }
 
-/* Kontener strony */
+/* Kontener do centracji */
 .container {
-  max-width: 1100px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 /* Nagłówek */
 header {
-  background: #2a5a36;
-  color: #f3f1e7;
-  padding: 30px 20px;
+  background-color: #3d5a40;
+  color: #fff;
+  position: relative;
+}
+
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
-.logo {
-  font-weight: 900;
-  font-size: 1.8rem;
-  letter-spacing: 3px;
-  font-family: 'Georgia', serif;
-  user-select: none;
-}
-nav {
-  margin-top: 10px;
-}
-nav a {
-  color: #f3f1e7;
-  margin-left: 25px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-nav a:hover {
-  color: #d2b48c;
 }
 
-/* Hero */
-.hero {
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center center/cover no-repeat;
-  height: 400px;
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+#hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* Ukryty na dużych ekranach */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #c4b9aa;
+}
+
+/* Sekcja hero */
+#hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+  height: 350px;
+  display: flex;
   justify-content: center;
-  color: #f3f1e7;
-  text-shadow: 0 0 10px rgba(0,0,0,0.6);
-  font-size: 2.5rem;
-  font-weight: 700;
+  align-items: center;
+  color: #fff;
   text-align: center;
-  padding: 0 15px;
+  padding: 0 20px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
 /* Sekcje */
 section {
-  padding: 50px 0;
-  border-bottom: 1px solid #ddd6ca;
-}
-section h2 {
-  font-family: 'Georgia', serif;
-  color: #2a5a36;
-  font-size: 2rem;
-  margin-bottom: 25px;
-  text-align: center;
-}
-section p {
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-  font-size: 1.1rem;
-  color: #4b4b4b;
-  line-height: 1.7;
+  margin-top: 40px;
 }
 
-/* Oferta masaży */
-.offer-list {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 25px;
+h2 {
+  color: #3d5a40;
+  border-bottom: 2px solid #c4b9aa;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
 }
-.offer-item {
-  background: #f3f1e7;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease;
+
+/* Oferta */
+#oferta ul {
+  list-style-type: none;
+  padding-left: 0;
 }
-.offer-item:hover {
-  transform: translateY(-5px);
-}
-.offer-item h3 {
-  color: #2a5a36;
-  margin-bottom: 10px;
-}
-.offer-item p {
-  color: #5a5a5a;
+
+#oferta li {
+  background-color: #f0ebe3;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-left: 6px solid #7b9771;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
 /* Galeria */
 .gallery {
-  max-width: 900px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
 }
+
 .gallery img {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgb(0 0 0 / 0.15);
+  border-radius: 10px;
+  object-fit: cover;
+  height: 130px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-  cursor: pointer;
 }
+
 .gallery img:hover {
   transform: scale(1.05);
 }
 
-/* Kontakt */
-.contact-info {
-  max-width: 600px;
-  margin: 0 auto;
+/* Formularz kontaktowy */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 12px;
+  border: 2px solid #c4b9aa;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #3d5a40;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #3d5a40;
+  color: #fff;
+  border: none;
+  padding: 14px;
   font-size: 1.1rem;
-  color: #4b4b4b;
-}
-.contact-info p {
-  margin-bottom: 12px;
-}
-.contact-info a {
   font-weight: 600;
-  color: #2a5a36;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #7b9771;
 }
 
 /* Stopka */
 footer {
-  background: #2a5a36;
-  color: #f3f1e7;
   text-align: center;
-  padding: 25px 10px;
+  margin: 60px 0 30px;
   font-size: 0.9rem;
+  color: #888;
 }
 
 /* Responsywność */
-@media(max-width: 768px) {
+
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
   nav {
-    margin-top: 15px;
-    width: 100%;
-    text-align: center;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #3d5a40;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 0 10px;
   }
+
+  nav.open {
+    transform: translateX(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav li {
+    border-bottom: 1px solid #7b9771;
+  }
+
   nav a {
-    margin: 0 10px;
-    font-size: 1.1rem;
-  }
-  .hero {
-    font-size: 1.8rem;
-    height: 300px;
+    padding: 15px 20px;
+    display: block;
   }
 }
