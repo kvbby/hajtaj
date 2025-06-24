@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Moja firma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Witamy w Mojej Firmie</h1>
+    <p>Profesjonalne usługi IT</p>
+  </header>
+  <section>
+    <h2>Nasza oferta</h2>
+    <p>Strony internetowe, doradztwo, obsługa IT</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Moja Firma</p>
+  </footer>
+</body>
+</html>
