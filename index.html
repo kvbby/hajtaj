@@ -1,49 +1,256 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hajtaj – Masaże Balijskie</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Oriental Relax - Masaże Tajskie i Balijskie</title>
+<style>
+  /* Reset i podstawy */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0; padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #faf7f0;
+    color: #3a3a3a;
+    line-height: 1.5;
+  }
+  a {
+    color: #2a5a36;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Kontener strony */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Nagłówek */
+  header {
+    background: #2a5a36;
+    color: #f3f1e7;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .logo {
+    font-weight: 900;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-family: 'Georgia', serif;
+    user-select: none;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  nav a {
+    color: #f3f1e7;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #d2b48c;
+  }
+
+  /* Hero */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f3f1e7;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  /* Sekcje */
+  section {
+    padding: 50px 0;
+    border-bottom: 1px solid #ddd6ca;
+  }
+  section h2 {
+    font-family: 'Georgia', serif;
+    color: #2a5a36;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  section p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+    color: #4b4b4b;
+    line-height: 1.7;
+  }
+
+  /* Oferta masaży */
+  .offer-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+  }
+  .offer-item {
+    background: #f3f1e7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s ease;
+  }
+  .offer-item:hover {
+    transform: translateY(-5px);
+  }
+  .offer-item h3 {
+    color: #2a5a36;
+    margin-bottom: 10px;
+  }
+  .offer-item p {
+    color: #5a5a5a;
+  }
+
+  /* Galeria */
+  .gallery {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 15px;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Kontakt */
+  .contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #4b4b4b;
+  }
+  .contact-info p {
+    margin-bottom: 12px;
+  }
+  .contact-info a {
+    font-weight: 600;
+    color: #2a5a36;
+  }
+
+  /* Stopka */
+  footer {
+    background: #2a5a36;
+    color: #f3f1e7;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Responsywność */
+  @media(max-width: 768px) {
+    nav {
+      margin-top: 15px;
+      width: 100%;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      font-size: 1.1rem;
+    }
+    .hero {
+      font-size: 1.8rem;
+      height: 300px;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Hajtaj</h1>
-    <p>Balijski masaż. Tajski klimat. Głęboki relaks.</p>
-  </header>
 
-  <section id="o-nas">
-    <h2>O nas</h2>
-    <p>Hajtaj to miejsce stworzone z myślą o głębokim relaksie i harmonii ciała. Nasze masażystki z Bali przeniosą Cię w świat orientu, spokoju i odprężenia. Wnętrze naszego salonu łączy balijski klimat z naturalnymi materiałami, zapachem olejków i spokojną muzyką.</p>
-  </section>
+<header class="container">
+  <div class="logo">Oriental Relax</div>
+  <nav>
+    <a href="#o-nas">O nas</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
 
-  <section id="masaze">
-    <h2>Nasze masaże</h2>
-    <ul>
-      <li><strong>Masaż balijski klasyczny</strong> – głęboki relaks całego ciała z użyciem olejków</li>
-      <li><strong>Masaż tajsko-bali</strong> – połączenie technik rozciągających i relaksacyjnych</li>
-      <li><strong>Masaż ciepłymi kamieniami</strong> – odprężenie przy użyciu wulkanicznych kamieni</li>
-      <li><strong>Masaż aromaterapeutyczny</strong> – olejki eteryczne, oddech i spokój</li>
-      <li><strong>Masaż stóp "Bali Feet"</strong> – refleksologia i relaks w jednym</li>
-      <li><strong>Masaż kobido z elementami balijskimi</strong> – twarz, głowa, kark</li>
-      <li><strong>Rytuał oczyszczenia ciała</strong> – peeling + masaż + olejki</li>
-      <li><strong>Masaż partnerski</strong> – relaksujący masaż dla dwojga</li>
-    </ul>
-  </section>
+<section class="hero" aria-label="Zdjęcie relaksującego masażu orientalnego">
+  Głęboki relaks i harmonia ciała
+</section>
 
-  <section id="kontakt">
-    <h2>Kontakt i rezerwacje</h2>
-    <p>📍 ul. Spokoju 7, Warszawa<br>
-       📞 +48 123 456 789<br>
-       ✉️ kontakt@hajtaj.pl</p>
-    <p>Godziny otwarcia:<br>
-       Pon–Sob: 10:00–20:00<br>
-       Niedziela: 12:00–18:00</p>
-    <!-- Można tu później podpiąć formularz lub Calendly -->
-  </section>
+<section id="o-nas" class="container">
+  <h2>O nas</h2>
+  <p>Oriental Relax to miejsce, gdzie ciało i dusza odnajdują spokój. Nasze masaże tajskie i balijskie wprowadzają w stan głębokiego odprężenia, łącząc tradycję z nowoczesnym podejściem do zdrowia i relaksu.</p>
+  <p>Zespół wykwalifikowanych masażystów dba o każdy szczegół, by zapewnić Ci niezapomniane doświadczenie w atmosferze ciszy, naturalnych zapachów i ciepłego światła.</p>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Hajtaj – Masaże Balijskie</p>
-  </footer>
+<section id="oferta" class="container">
+  <h2>Oferta masaży</h2>
+  <div class="offer-list">
+    <article class="offer-item">
+      <h3>Masaż tajski klasyczny</h3>
+      <p>Tradycyjny masaż, który poprawia krążenie i elastyczność mięśni, przynosząc głęboki relaks całego ciała.</p>
+    </article>
+    <article class="offer-item">
+      <h3>Masaż balijski</h3>
+      <p>Delikatny masaż z użyciem olejków eterycznych, który koi zmysły i pomaga zredukować stres.</p>
+    </article>
+    <article class="offer-item">
+      <h3>Masaż kamieniami wulkanicznymi</h3>
+      <p>Ciepłe kamienie rozluźniają mięśnie i działają regenerująco, dając uczucie wewnętrznego ciepła.</p>
+    </article>
+    <article class="offer-item">
+      <h3>Masaż aromaterapeutyczny</h3>
+      <p>Połączenie masażu i naturalnych olejków, które wspomagają regenerację i poprawiają samopoczucie.</p>
+    </article>
+  </div>
+</section>
+
+<section id="galeria" class="container">
+  <h2>Galeria</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Masażysta wykonujący masaż tajski" />
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Relaksujący masaż balijski" />
+    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80" alt="Kamienie do masażu" />
+    <img src="https://images.unsplash.com/photo-1496317556649-f930d733eea2?auto=format&fit=crop&w=600&q=80" alt="Olejek do masażu" />
+  </div>
+</section>
+
+<section id="kontakt" class="container">
+  <h2>Kontakt</h2>
+  <div class="contact-info">
+    <p>📍 Ul. Spokojna 12, Warszawa</p>
+    <p>📞 <a href="tel:+48123456789">+48 123 456 789</a></p>
+    <p>✉️ <a href="mailto:kontakt@orientalrelax.pl">kontakt@orientalrelax.pl</a></p>
+    <p>Godziny otwarcia: Pon–Sob 10:00–20:00, Niedziela 12:00–18:00</p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Oriental Relax – Masaże Tajskie i Balijskie
+</footer>
+
 </body>
 </html>
